@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(45deg, #ff007f, #ff6600, #ffbb00, #44ff00, #00ffee, #6600ff);
+    background-size: 400% 400%;
+    animation: gradientBG 10s ease infinite;
+    color: black;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 30px;
+    max-width: 700px;
+    margin: auto;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(20px);
+    animation: fadeIn 1.5s ease-in-out;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: 700;
+    color: black;
+    text-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+p {
+    font-size: 18px;
+    margin-top: 10px;
+    color: black;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.skills, .projects, .social-links, .scoreboard {
+    margin: 20px 0;
+}
+
+h2 {
+    font-size: 26px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: black;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.projects a, .social-links a {
+    display: inline-block;
+    margin: 10px;
+    padding: 15px 25px;
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    background: linear-gradient(90deg, #ff007f, #ff6600);
+    border-radius: 10px;
+    font-weight: bold;
+    transition: all 0.4s ease-in-out;
+    box-shadow: 0 4px 15px rgba(255, 0, 127, 0.6);
+}
+
+.projects a:hover, .social-links a:hover {
+    transform: scale(1.15);
+    background: linear-gradient(90deg, #00ffee, #6600ff);
+    box-shadow: 0 6px 20px rgba(0, 255, 238, 0.7);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Scoreboard */
+.scoreboard {
+    background: rgba(255, 255, 255, 0.3);
+    padding: 15px;
+    border-radius: 10px;
+    display: inline-block;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.scoreboard button {
+    margin: 10px;
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    background: #ff6600;
+    color: white;
+    transition: 0.3s;
+}
+
+.scoreboard button:hover {
+    background: #44ff00;
+    transform: scale(1.1);
+}
